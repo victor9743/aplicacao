@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Descricao:</strong>
+  <%= @contum.descricao %>
+</p>
+
+<p>
+  <strong>Valorconta:</strong>
+  <%= @contum.valorconta %>
+</p>
+
+<p>
+  <strong>Valorrecibo:</strong>
+  <%= @contum.valorrecibo %>
+</p>
+
+<p>
+  <strong>Image conta:</strong>
+  <%= @contum.image_conta %>
+</p>
+
+<p>
+  <strong>Image recibo:</strong>
+  <%= @contum.image_recibo %>
+</p>
+
+<%= link_to 'Edit', edit_contum_path(@contum) %> |
+<%= link_to 'Back', conta_path %>

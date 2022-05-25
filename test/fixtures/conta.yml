@@ -1,0 +1,15 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  descricao: MyString
+  valorconta: 1.5
+  valorrecibo: 1.5
+  image_conta: MyText
+  image_recibo: MyText
+
+two:
+  descricao: MyString
+  valorconta: 1.5
+  valorrecibo: 1.5
+  image_conta: MyText
+  image_recibo: MyText
