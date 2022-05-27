@@ -1,0 +1,27 @@
+<%= form_with(model: recibo, local: true) do |form| %>
+  <% if recibo.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(recibo.errors.count, "error") %> prohibited this recibo from being saved:</h2>
+
+      <ul>
+        <% recibo.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :descricao %>
+    <%= form.text_field :descricao %>
+  </div>
+
+  <div class="field">
+    <%= form.label :image_data %>
+    <%= form.text_area :image_data %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

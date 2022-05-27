@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Descricao:</strong>
+  <%= @recibo.descricao %>
+</p>
+
+<p>
+  <strong>Image data:</strong>
+  <%= @recibo.image_data %>
+</p>
+
+<%= link_to 'Edit', edit_recibo_path(@recibo) %> |
+<%= link_to 'Back', recibos_path %>
