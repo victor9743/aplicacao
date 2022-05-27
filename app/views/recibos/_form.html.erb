@@ -10,6 +10,11 @@
       </ul>
     </div>
   <% end %>
+  <div class= "field">
+    <%= form.label :fatura_id %>
+    <%= form.select("fatura_id", Fatura.all.pluck(:descricao, :id), {include_blank: 'Selecione...'})%>
+    <%#= form.select("fatura_id", MiningType.all.collect  {|m| [ m.description, m.id ] }, {include_blank: 'Selecione...'}) %>
+  </div>
 
   <div class="field">
     <%= form.label :descricao %>
@@ -17,8 +22,8 @@
   </div>
 
   <div class="field">
-    <%= form.label :image_data %>
-    <%= form.text_area :image_data %>
+    <%= form.label :image %>
+    <%= form.file_field :image %>
   </div>
 
   <div class="actions">

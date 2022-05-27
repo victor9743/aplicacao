@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2022_05_27_015528) do
+ActiveRecord::Schema.define(version: 2022_05_27_185904) do
 
   create_table "faturas", force: :cascade do |t|
     t.string "descricao"
@@ -24,6 +24,8 @@ ActiveRecord::Schema.define(version: 2022_05_27_015528) do
     t.text "image_data"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.integer "fatura_id"
+    t.index ["fatura_id"], name: "index_recibos_on_fatura_id"
   end
 
   create_table "usuarios", force: :cascade do |t|
@@ -39,4 +41,5 @@ ActiveRecord::Schema.define(version: 2022_05_27_015528) do
     t.index ["reset_password_token"], name: "index_usuarios_on_reset_password_token", unique: true
   end
 
+  add_foreign_key "recibos", "faturas"
 end

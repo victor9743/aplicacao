@@ -13,6 +13,7 @@ class RecibosController < ApplicationController
   # GET /recibos/new
   def new
     @recibo = Recibo.new
+    @faturas = Fatura.pluck(:id, :descricao)
   end
 
   # GET /recibos/1/edit
@@ -22,6 +23,7 @@ class RecibosController < ApplicationController
   # POST /recibos or /recibos.json
   def create
     @recibo = Recibo.new(recibo_params)
+    @faturas = Fatura.all
 
     respond_to do |format|
       if @recibo.save
@@ -65,6 +67,6 @@ class RecibosController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def recibo_params
-      params.require(:recibo).permit(:descricao, :image_data)
+      params.require(:recibo).permit(:descricao, :image)
     end
 end
